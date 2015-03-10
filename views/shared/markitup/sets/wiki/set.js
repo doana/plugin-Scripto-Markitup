@@ -25,13 +25,32 @@ mySettings = {
 		{name:'Bulleted list', openWith:'(!(* |!|*)!)'}, 
 		{name:'Numeric list', openWith:'(!(# |!|#)!)'}, 
 		{separator:'---------------' },
-		{name:'Picture', key:"P", replaceWith:'[[Image:[![Url:!:http://]!]|[![name]!]]]'}, 
-		{name:'Link', key:"L", openWith:"[[![Link]!] ", closeWith:']', placeHolder:'Your text to link here...' },
-		{name:'Url', openWith:"[[![Url:!:http://]!] ", closeWith:']', placeHolder:'Your text to link here...' },
-		{separator:'---------------' },
-		{name:'Quotes', openWith:'(!(> |!|>)!)', placeHolder:''},
-		{name:'Code', openWith:'(!(<source lang="[![Language:!:php]!]">|!|<pre>)!)', closeWith:'(!(</source>|!|</pre>)!)'}, 
-		{separator:'---------------' },
-		{name:'Preview', call:'preview', className:'preview'}
-	]
+		{name:'Indent', openWith:':', className:"indent"}, 
+		{name:'Quotes', openWith:'(!(> |!|>)!)', className:"quotes", placeHolder:''},
+        {   name:'Table generator', 
+            className:'tablegenerator', 
+            placeholder:"Your text here...",
+            replaceWith:function(markItUp) {
+                var cols = prompt("How many cols?"),
+                    rows = prompt("How many rows?"),
+                    html = "<table>\n";
+                if (markItUp.altKey) {
+                    html += " <tr>\n";
+                    for (var c = 0; c < cols; c++) {
+                        html += "! [![TH"+(c+1)+" text:]!]\n";  
+                    }
+                    html+= " </tr>\n";
+                }
+                for (var r = 0; r < rows; r++) {
+                    html+= " <tr>\n";
+                    for (var c = 0; c < cols; c++) {
+                        html += "  <td>"+(markItUp.placeholder||"")+"</td>\n";  
+                    }
+                    html+= " </tr>\n";
+                }
+                html += "<table>\n";
+                return html;
+            }
+        } 
+    ]
 }
