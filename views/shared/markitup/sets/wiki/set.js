@@ -16,15 +16,15 @@ mySettings = {
 		{name:'Heading 2', key:'2', openWith:'=== ', closeWith:' ===', placeHolder:'Your title here...' },
 		{name:'Heading 3', key:'3', openWith:'==== ', closeWith:' ====', placeHolder:'Your title here...' },
 		{name:'Heading 4', key:'4', openWith:'===== ', closeWith:' =====', placeHolder:'Your title here...' },
-		{name:'Heading 5', key:'5', openWith:'====== ', closeWith:' ======', placeHolder:'Your title here...' },
-		{separator:'---------------' },		
+		{name:'Heading 5', key:'5', openWith:'====== ', closeWith:' ======', placeHolder:'Your title here...'},
+		{separator:'---------------'},		
 		{name:'Bold', key:'B', openWith:"'''", closeWith:"'''"}, 
 		{name:'Italic', key:'I', openWith:"''", closeWith:"''"}, 
 		{name:'Stroke through', key:'S', openWith:'<s>', closeWith:'</s>'}, 
-		{separator:'---------------' },
+		{separator:'---------------'},
 		{name:'Bulleted list', openWith:'(!(* |!|*)!)'}, 
 		{name:'Numeric list', openWith:'(!(# |!|#)!)'}, 
-		{separator:'---------------' },
+		{separator:'---------------'},
 		{name:'Indent', openWith:':', className:"indent"}, 
 		{name:'Quotes', openWith:'(!(> |!|>)!)', className:"quotes", placeHolder:''},
         {   name:'Table generator', 
@@ -51,6 +51,7 @@ mySettings = {
                 html += "<table>\n";
                 return html;
             }
-        } 
+        }, 
+		{name:'Comment', openWith:'{', closeWith:'}', placeHolder:'Your comment here...', className: "comment"},
     ]
 }

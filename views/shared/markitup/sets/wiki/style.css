@@ -59,3 +59,7 @@
 .markItUp .tablegenerator a {
     background-image:url(images/table.png);
 }
+.markItUp .comment a {
+    background-image:url(images/comment.png);
+}
+
