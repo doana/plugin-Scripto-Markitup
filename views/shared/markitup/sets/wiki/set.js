@@ -15,7 +15,7 @@ mySettings = {
 		{name:'Heading 1', key:'1', openWith:'== ', closeWith:' ==', placeHolder:'Your title here...', className:"h1" },
 		{name:'Heading 2', key:'2', openWith:'=== ', closeWith:' ===', placeHolder:'Your title here...', className:"h2" },
 		{separator:'---------------'},		
-		{name:'Italic', key:'I', openWith:"''", closeWith:"''", className: "italic"}, 
+		{name:'Underline', key:'U', openWith:'<u>', closeWith:'</u>', className: "underline"}, 
 		{name:'Stroke through', key:'S', openWith:'<s>', closeWith:'</s>', className: "strike"}, 
 		{separator:'---------------'},
         {   name:'Table generator', 
