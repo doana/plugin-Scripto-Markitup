@@ -1,10 +1,5 @@
 jQuery( window ).load(function() {
     jQuery('#scripto-transcription-page-wikitext').markItUp(mySettings);
-    jQuery('#scripto-transcription textarea').keypress(function(event) {
-        if(event.keyCode == 13) {
-            insertAtCaret(this, "\n");
-        }
-    });
 });
 
 function insertAtCaret(element, text) {

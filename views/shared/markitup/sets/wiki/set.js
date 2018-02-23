@@ -11,6 +11,7 @@
 mySettings = {
 	previewParserPath:	'', // path to your Wiki parser
 	onShiftEnter:		{keepDefault:false, replaceWith:'\n\n'},
+	onEnter:		{keepDefault:true, replaceWith:'\n'},
 	markupSet: [
 		{name:'Heading 1', key:'1', openWith:'== ', closeWith:' ==', placeHolder:'Your title here...', className:"h1" },
 		{name:'Heading 2', key:'2', openWith:'=== ', closeWith:' ===', placeHolder:'Your title here...', className:"h2" },
