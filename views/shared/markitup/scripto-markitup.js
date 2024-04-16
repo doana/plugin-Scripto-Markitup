@@ -1,4 +1,4 @@
-jQuery( window ).load(function() {
+jQuery( document ).ready(function() {
     jQuery('#scripto-transcription-page-wikitext').markItUp(mySettings);
 });
 
